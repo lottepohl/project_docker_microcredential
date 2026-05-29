@@ -1,0 +1,10 @@
+Start Job
+Thu May 28 10:14:46 AM CEST 2026
+Thu May 28 10:14:48 AM CEST 2026
+End Job
+=== Report resources usage ===
+JobID         Partition    Elapsed      State   TotalCPU     MaxRSS     AveRSS 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- 
+20308570        donphan   00:00:05    RUNNING   00:00:00                       
+20308570.ba+              00:00:05    RUNNING   00:00:00                       
+20308570.ex+              00:00:05    RUNNING   00:00:00                       
