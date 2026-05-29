@@ -1,7 +1,18 @@
-WORKDIR /app
-COPY requirements.txt .
-COPY server.py .
 FROM python:3.9-slim
-CMD ["python", "server.py"]
+
+#Set working directory
+WORKDIR /app
+
+# Install requirements
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Define the host for the container
 EXPOSE 8080
+
+# Copy and run python script
+COPY server.py .
+CMD ["python", "server.py"]
+
+## COMMAND USED TO RUN THE CONTAINER AND POST ON LOCAL HOST:
+## docker run --rm -p 8080:8080 -v ./TRAINING_MODEL/iris_model.pkl:/app/models/iris_model.pkl serve_image
